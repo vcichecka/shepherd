@@ -2,10 +2,9 @@ init = ->
   setupShepherd()
 
 setupShepherd = ->
-  shepherd = new Shepherd
+  shepherd = new Shepherd.Tour
     defaults:
       classes: 'shepherd-element shepherd-open shepherd-theme-arrows'
-      scrollTo: true
 
   shepherd.addStep 'welcome',
     text: [
@@ -28,7 +27,7 @@ setupShepherd = ->
 
   shepherd.addStep 'including',
     title: 'Including'
-    text: 'Including Shepherd is easy! Just include <a href="http://github.hubspot.com/tether">Tether</a>, Shepherd, and a Shepherd theme file.'
+    text: 'Including Shepherd is easy! Just include shepherd.js, and a Shepherd theme file.'
     attachTo: '.hero-including bottom'
     buttons: [
       text: 'Back'
@@ -54,7 +53,7 @@ setupShepherd = ->
 
   shepherd.addStep 'followup',
     title: 'Learn more'
-    text: 'Check us out on GitHub or download the latest release.'
+    text: 'Star Shepherd on Github so you remember it for your next project'
     attachTo: '.hero-followup bottom'
     buttons: [
       text: 'Back'
